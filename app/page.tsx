@@ -6,6 +6,9 @@ export default function Homepage() {
   return (
     <div className="flex flex-col gap-5 p-10">
       <h1>Home</h1>
+
+      <h1>User Dashboard</h1>
+
       <Input className="w-max" placeholder="input test" />
       <Button className="w-max" variant={"default"}>
         Button test
