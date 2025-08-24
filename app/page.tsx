@@ -46,7 +46,7 @@ export default function Homepage() {
         </div>
       </div>
       <footer className="text-center">
-        Made with ❤️ by <a href="https://x.com/home"></a>Lokosang Felix
+        Made with ❤️ by <a href="https://x.com/home">Lokosang Felix</a>
       </footer>
     </>
   );
