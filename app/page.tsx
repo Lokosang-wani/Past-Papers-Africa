@@ -46,7 +46,10 @@ export default function Homepage() {
         </div>
       </div>
       <footer className="text-center">
-        Made with ❤️ by <a href="https://x.com/home">Lokosang Felix</a>
+        Made with ❤️ by{" "}
+        <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+          Lokosang Felix
+        </a>
       </footer>
     </>
   );
