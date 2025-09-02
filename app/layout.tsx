@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Past papers Africa",
-  description: "An Online platform for African students to prepare for national certificates exams",
+  description:
+    "An Online platform for African students to prepare for national certificates exams",
 };
 
 export default function RootLayout({
@@ -13,8 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
