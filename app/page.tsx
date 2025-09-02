@@ -1,8 +1,25 @@
 "use client";
+import React from "react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetFooter,
+  SheetClose,
+} from "@/components/ui/sheet";
+import { SignIn, SignUp } from "@clerk/nextjs";
+import { useSearchParams } from "next/navigation";
 
 export default function Homepage() {
+  const [openSignInForm, setOpenSignInForm] = React.useState(false);
+  const searchParams = useSearchParams();
+  const formType = searchParams.get("formType");
   const menuItems: { name: string; path: string }[] = [
     {
       name: "Home",
@@ -31,7 +48,12 @@ export default function Homepage() {
                 {item.name}
               </div>
             ))}
-            <Button variant={"outline"}>Login</Button>
+            <Button
+              onClick={() => setOpenSignInForm(true)}
+              variant={"secondary"}
+            >
+              Sign in
+            </Button>
           </div>
         </div>
 
@@ -44,7 +66,22 @@ export default function Homepage() {
             feedback.
           </p>
         </div>
+        <Sheet open={openSignInForm} onOpenChange={setOpenSignInForm}>
+          <SheetContent className="min-w-[500px]">
+            <SheetHeader>
+              <SheetTitle></SheetTitle>
+            </SheetHeader>
+            <div>
+              {formType === "signup" ? (
+                <SignUp routing="hash" signInUrl="/?formType=signin" />
+              ) : (
+                <SignIn routing="hash" signUpUrl="/?formType=signup" />
+              )}
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
+
       <footer className="text-center">
         Made with ❤️ by{" "}
         <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
