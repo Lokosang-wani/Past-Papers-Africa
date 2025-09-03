@@ -1,7 +1,10 @@
+import { getCurrentUserFromSupabase } from "@/actions/users";
 import { UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 async function UserDashboardPage() {
   const user = await currentUser();
+  const supabaseUserResponse = await getCurrentUserFromSupabase();
+ 
 
   return (
     <>
