@@ -101,7 +101,7 @@ export default function Homepage() {
         </Sheet>
       </div>
 
-      <footer className="text-center">
+      <footer className="text-center pb-3">
         Made with ❤️ by{" "}
         <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
           Lokosang Felix

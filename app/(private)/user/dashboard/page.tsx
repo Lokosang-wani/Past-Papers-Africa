@@ -13,7 +13,9 @@ async function UserDashboardPage() {
         <UserButton />
 
         <div className="flex flex-col gap-2">
-          <h1>clerk User ID : {user?.id}</h1>
+          <h1 className="text-3xl">Welcome back, {user?.firstName + " " + user?.lastName}</h1>
+          <p>Ready to continue your exam preparation journey?</p>
+          {/* <h1>clerk User ID : {user?.id}</h1>
           <h1>Clerk User Email : {user?.emailAddresses[0].emailAddress}</h1>
           <h1>User Full Name: {user?.firstName + " " + user?.lastName}</h1>
           <h1>Username : {user?.username}</h1>
@@ -24,7 +26,7 @@ async function UserDashboardPage() {
               alt="user profile picture"
               className="w-20 h-20 rounded-full"
             />{" "}
-          </h1>
+          </h1> */}
         </div>
       </div>
     </>
