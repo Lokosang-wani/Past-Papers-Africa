@@ -12,9 +12,9 @@ async function UserDashboardPage() {
         <h1>User Dashboard Page</h1>
         <UserButton />
 
-        <div className="flex flex-col gap-2">
-          <h1 className="text-3xl">Welcome back, {user?.firstName + " " + user?.lastName}</h1>
-          <p>Ready to continue your exam preparation journey?</p>
+        <div className="flex flex-col gap-2 ">
+          <h1 className="text-3xl font-semibold text-gray-800 sm:text-5xl">Welcome back, {user?.firstName + " " + user?.lastName}</h1>
+          <p className="text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">Ready to continue your exam preparation journey?</p>
           {/* <h1>clerk User ID : {user?.id}</h1>
           <h1>Clerk User Email : {user?.emailAddresses[0].emailAddress}</h1>
           <h1>User Full Name: {user?.firstName + " " + user?.lastName}</h1>

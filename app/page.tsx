@@ -23,7 +23,7 @@ export default function Homepage() {
   const formType = searchParams.get("formType");
   const menuItems: { name: string; path: string }[] = [
     {
-      name: "Home",
+      name: "",
       path: "/",
     },
     {
